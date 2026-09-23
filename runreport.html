@@ -66,6 +66,18 @@
             padding: 2rem 1.25rem 4rem;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .hero {
             display: grid;
             gap: 2rem;
@@ -301,9 +313,11 @@
                             class="logo"
                             src="assets/runreport-logo.svg"
                             alt=""
+                            aria-hidden="true"
                             width="640"
                             height="220"
                         >
+                        <span class="sr-only">RUNREPORT logo</span>
                     </div>
                 </div>
             </div>

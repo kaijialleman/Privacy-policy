@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="stroke" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff" />
+      <stop offset="100%" stop-color="#bfdbfe" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="220" rx="36" fill="url(#bg)" />
+  <circle cx="112" cy="72" r="20" fill="#eff6ff" />
+  <path d="M108 96l36 16 28-28c7-7 17-7 24 0 7 7 6 18-1 25l-33 32 22 41c5 10 1 22-9 27-10 5-22 1-27-9l-20-37-27 22c-9 7-21 6-28-3-7-9-6-21 3-28l27-22-27-13c-10-5-14-17-10-27 5-10 17-14 27-10l15 7z" fill="url(#stroke)" />
+  <path d="M79 124h-23c-9 0-16 7-16 16s7 16 16 16h23" fill="none" stroke="#eff6ff" stroke-linecap="round" stroke-width="12" />
+  <path d="M211 146c26-20 48-30 71-28 24 2 45 13 67 8 16-3 33-14 51-32" fill="none" stroke="#eff6ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" opacity=".95" />
+  <path d="M384 95l16-1-4 16" fill="none" stroke="#eff6ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+  <text x="225" y="96" fill="#eff6ff" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="4">RUN</text>
+  <text x="225" y="142" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800" letter-spacing="3">REPORT</text>
+  <text x="225" y="178" fill="#e0f2fe" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="1.5">FUELING NOTES • TRAINING CONTEXT • REFLECTION</text>
+</svg>

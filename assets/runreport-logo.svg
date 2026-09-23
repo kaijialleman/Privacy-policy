@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" aria-labelledby="logo-title">
+  <title id="logo-title">RUNREPORT logo</title>
   <defs>
     <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
       <stop offset="0%" stop-color="#1d4ed8" />

@@ -41,6 +41,25 @@
             color: inherit;
         }
 
+        .skip-link {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            background: #ffffff;
+            color: var(--primary-dark);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            transform: translateY(-220%);
+            transition: transform 0.2s ease;
+            z-index: 10;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
         .page {
             max-width: 1120px;
             margin: 0 auto;
@@ -150,6 +169,12 @@
             color: var(--primary-dark);
         }
 
+        .button:focus-visible,
+        .button-secondary:focus-visible {
+            outline: 3px solid #bfdbfe;
+            outline-offset: 3px;
+        }
+
         .grid {
             display: grid;
             gap: 1.25rem;
@@ -213,7 +238,8 @@
     </style>
 </head>
 <body>
-    <main class="page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="page" id="main-content">
         <section class="hero" aria-labelledby="runreport-title">
             <div class="hero-card">
                 <div class="hero-content">

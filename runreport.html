@@ -102,14 +102,6 @@
             display: block;
         }
 
-        .logo-object {
-            width: min(100%, 430px);
-            aspect-ratio: 640 / 220;
-            height: auto;
-            display: block;
-            border: 0;
-        }
-
         .eyebrow {
             display: inline-block;
             margin: 0 0 1rem;
@@ -305,14 +297,13 @@
                         </div>
                     </div>
                     <div>
-                        <object
-                            class="logo-object"
-                            data="assets/runreport-logo.svg"
-                            type="image/svg+xml"
-                            aria-label="RUNREPORT logo"
+                        <img
+                            class="logo"
+                            src="assets/runreport-logo.svg"
+                            alt="RUNREPORT logo"
+                            width="640"
+                            height="220"
                         >
-                            RUNREPORT logo
-                        </object>
                     </div>
                 </div>
             </div>
@@ -379,17 +370,5 @@
             <p>RUNREPORT is a runner-led project focused on thoughtful tracking and future insight.</p>
         </footer>
     </main>
-    <script>
-        (function () {
-            var focusMain = function () {
-                if (window.location.hash === '#main-content') {
-                    document.getElementById('main-content').focus();
-                }
-            };
-
-            window.addEventListener('hashchange', focusMain);
-            window.addEventListener('load', focusMain);
-        }());
-    </script>
 </body>
 </html>

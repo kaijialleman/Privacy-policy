@@ -370,5 +370,12 @@
             <p>RUNREPORT is a runner-led project focused on thoughtful tracking and future insight.</p>
         </footer>
     </main>
+    <script>
+        document.querySelector('.skip-link').addEventListener('click', function () {
+            requestAnimationFrame(function () {
+                document.getElementById('main-content').focus();
+            });
+        });
+    </script>
 </body>
 </html>

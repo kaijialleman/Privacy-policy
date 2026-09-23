@@ -76,11 +76,14 @@
         .hero-card,
         .section-card,
         .cta-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
             border: 1px solid var(--border);
             border-radius: 24px;
             box-shadow: var(--shadow);
+        }
+
+        .hero-card,
+        .section-card {
+            background: #ffffff;
         }
 
         .hero-card {
@@ -205,6 +208,20 @@
             text-align: center;
             background: linear-gradient(135deg, rgba(30, 64, 175, 0.98), rgba(14, 165, 233, 0.94));
             color: #eff6ff;
+        }
+
+        @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+            .hero-card,
+            .section-card,
+            .cta-card {
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+
+            .hero-card,
+            .section-card {
+                background: rgba(255, 255, 255, 0.9);
+            }
         }
 
         .cta-card h2,

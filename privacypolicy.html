@@ -47,6 +47,8 @@
         </header>
 
         <article>
+            <p><strong>Effective date:</strong> October 9, 2026</p>
+
             <section aria-labelledby="information-we-collect">
                 <h2 id="information-we-collect">1. Information We Collect</h2>
 
@@ -63,17 +65,19 @@
                 <p>You may also use certain features through anonymous authentication where supported.</p>
 
                 <h3>Activity and training information</h3>
-                <p>You may provide information such as:</p>
+                <p>You provide account details, profile information, race and workout summaries, fueling timelines, ratings, notes, photos, and social content directly through Run Report. Race, workout, and fueling information includes:</p>
                 <ul>
                     <li>Race and workout names</li>
-                    <li>Distance, date, start time, and performance rating</li>
-                    <li>Nutrition and fueling events</li>
+                    <li>Distance, date, start time, elapsed time when provided, visibility, and self-reported activity rating</li>
+                    <li>Fueling event types and timing, timeline slot offsets and count, event notes, and summary notes</li>
                     <li>Food and drink entries</li>
                     <li>Timing relative to an activity</li>
+                    <li>Cheers count</li>
                     <li>Training goals and personal notes</li>
                     <li>Favorite nutrition categories</li>
                     <li>Photos associated with activities</li>
                 </ul>
+                <p>This information is collected to provide the app's activity and fueling features.</p>
 
                 <h3>Social information</h3>
                 <p>If you use our social features, we may collect and store:</p>
@@ -131,10 +135,7 @@
                     <li>Public follower and following relationships</li>
                 </ul>
                 <p>Do not include sensitive information in public activity summaries, comments, notes, or photos.</p>
-                <p>
-                    You can control whether new activity summaries are private or public using the app’s privacy settings.
-                    Information that has already been viewed, copied, or shared by others may not be fully removed or recoverable.
-                </p>
+                <p>You can control whether new activity summaries are private or public using the app’s privacy settings. Information that has already been viewed, copied, or shared by others may not be fully removed or recoverable.</p>
             </section>
 
             <section aria-labelledby="information-sharing">
@@ -143,17 +144,12 @@
                 <p>We may share or make information available in the following circumstances:</p>
 
                 <h3>With service providers</h3>
-                <p>We use third-party providers to operate Run Report, including services for:</p>
+                <p>We use third-party providers to operate Run Report, including services for authentication, database storage, file and photo storage, app infrastructure, diagnostics, and security.</p>
+                <p>Our current infrastructure uses Firebase services provided by Google LLC for authentication, database storage, and file storage. Google also provides the Google Cloud services described below. Google processes this information as a service provider on Run Report's behalf under the terms and data-protection commitments applicable to the Firebase and Google Cloud services we use.</p>
                 <ul>
-                    <li>Authentication</li>
-                    <li>Database storage</li>
-                    <li>File and photo storage</li>
-                    <li>App infrastructure</li>
-                    <li>Diagnostics and security</li>
+                    <li>When you upload a profile or activity photo, Run Report sends the selected image to Google Cloud Vision SafeSearch for an automated content check before storage. The in-app prompt identifies this image-processing transfer before it occurs. Images that fail the check are rejected.</li>
+                    <li>If you opt in to fueling analysis and custom model development, Run Report replaces your account identifier with a random pseudonymous participant key and sends the listed eligible fields to Google LLC's Google Cloud services. BigQuery stores and supports analysis of the dataset, including statistical analysis such as clustering and dimensionality reduction. If you opt in, you also authorize the described future use of eligible data in Gemini Enterprise Agent Platform managed custom-training jobs to train and evaluate Run Report's custom transformer-based fueling-outcome classifier using fueling-history features and self-reported activity-rating labels. This trains Run Report's model; it does not send your data to the Gemini generative-model API. These training jobs are planned and are not currently active.</li>
                 </ul>
-                <p>
-                    Our current infrastructure uses Firebase services provided by Google. These providers process information on our behalf according to their applicable terms and privacy practices.
-                </p>
 
                 <h3>With other users</h3>
                 <p>Information you mark as public may be visible to other Run Report users.</p>
@@ -170,39 +166,26 @@
 
             <section aria-labelledby="nutrition-and-health-related-information">
                 <h2 id="nutrition-and-health-related-information">5. Nutrition and Health-Related Information</h2>
-                <p>
-                    Run Report may allow you to record nutrition, fueling, performance, and activity information. This information may be sensitive.
-                </p>
-                <p>
-                    Run Report is not a medical service and does not provide medical diagnoses or medical advice. Pattern insights are for informational purposes only and should be discussed with a qualified healthcare professional when appropriate.
-                </p>
+                <p>Run Report may allow you to record nutrition, fueling, performance, and activity information. This information may be sensitive.</p>
+                <p>Run Report is not a medical service and does not provide medical diagnoses or medical advice. Pattern insights are for informational purposes only and should be discussed with a qualified healthcare professional when appropriate.</p>
                 <p>You should not use Run Report as a substitute for professional medical care.</p>
             </section>
 
             <section aria-labelledby="ai-and-training-insights">
                 <h2 id="ai-and-training-insights">6. AI and Training Insights</h2>
-                <p>
-                    Run Report may provide automated activity or nutrition pattern insights based on information you enter.
-                </p>
-                <p>
-                    Where the app provides an AI training or data-use consent setting, your choice controls whether eligible information may be used for that optional purpose. You can change your preference in the app’s privacy settings.
-                </p>
-                <p>
-                    Automated insights may be incomplete or inaccurate. They should not be treated as medical advice or a guaranteed training recommendation.
-                </p>
+                <p>Run Report uses BigQuery analyses to provide community-level fueling insights. Published patterns are shown only when at least 20 distinct opted-in participants contribute to a group, and each participant is weighted equally in the displayed average. The results describe associations and are not medical advice or a guarantee of an outcome.</p>
+                <p>You may separately opt in to contribute eligible race summaries to Run Report's statistical analysis and custom fueling-model development. Participation is optional and does not affect core app features. Only summaries created on or after your affirmative opt-in are eligible; summaries created before you opt in are not added retroactively. The research export uses the summary as it was first saved, and later edits do not update that research row. Eligible fields include race name, distance, date, start time, elapsed time when provided, visibility, self-reported activity rating, cheers count, fueling event types and timing, timeline slot offsets and count, event notes, and summary notes.</p>
+                <p>For this optional purpose, Run Report replaces your account identifier with a random pseudonymous participant key. This is pseudonymous data, not a promise of anonymity: notes are free text and could identify you if you include personal details. We do not include your username, account identifiers, account email address, profile photo, race photos, or other users' comments in the research export. We restrict access to the research dataset to authorized Run Report systems and personnel. A materially different service or purpose will require an updated disclosure and consent.</p>
+                <p>You can withdraw at any time in Privacy Settings. Once withdrawal is recorded, Run Report stops exporting future eligible summaries and immediately begins deleting your rows from the active BigQuery research dataset. If a service failure prevents deletion, the request is queued and retried until completed. To clean up delayed or retried export events, Run Report retains the random participant key in a server-only deletion queue for up to eight days after withdrawal, then deletes that key and queue record. Withdrawal does not remove your race summaries from Firebase because they continue to support your account's app features; delete those summaries separately in the app or request account deletion.</p>
+                <p>After rows are deleted from BigQuery, Google Cloud's recovery systems may retain recoverable copies for a limited period. BigQuery's default time-travel period is up to seven days, followed by a seven-day fail-safe period, so deleted data may remain in recovery storage for up to 14 days. Those copies are not available for ordinary analysis and are removed when the applicable recovery periods end. Run Report cannot promise immediate erasure from these provider-managed recovery copies.</p>
+                <p>Withdrawal and deletion do not alter custom models that were already trained before withdrawal. We do not automatically retrain or modify those models. Data from a withdrawn participant is not used for future exports or future model-training datasets unless that person opts in again.</p>
             </section>
 
             <section aria-labelledby="data-storage-and-security">
                 <h2 id="data-storage-and-security">7. Data Storage and Security</h2>
-                <p>
-                    We use reasonable administrative, technical, and organizational safeguards to protect information from unauthorized access, loss, misuse, alteration, or disclosure.
-                </p>
-                <p>
-                    No method of electronic storage or transmission is completely secure. We cannot guarantee absolute security.
-                </p>
-                <p>
-                    Access to private account data is restricted through authentication and database permissions. Public information is intentionally accessible to other users when you choose to publish it.
-                </p>
+                <p>We use reasonable administrative, technical, and organizational safeguards to protect information from unauthorized access, loss, misuse, alteration, or disclosure.</p>
+                <p>No method of electronic storage or transmission is completely secure. We cannot guarantee absolute security.</p>
+                <p>Access to private account data is restricted through authentication and database permissions. Public information is intentionally accessible to other users when you choose to publish it.</p>
             </section>
 
             <section aria-labelledby="data-retention">
@@ -215,60 +198,49 @@
                     <li>Resolve disputes</li>
                     <li>Enforce our agreements</li>
                 </ul>
-                <p>
-                    When you delete your account, we will delete or de-identify account information and associated activity data within a reasonable period, subject to technical limitations, legal obligations, backups, and information already shared publicly by other users.
-                </p>
+                <p>When you delete your account, Run Report removes your Firebase account records and starts deletion of your active pseudonymous research rows. Deletion requests are processed promptly. If a service failure prevents deletion, the request is queued and retried until completed. Google Cloud recovery copies may remain for up to 14 days after deletion, information already viewed or shared by others may not be recoverable, and custom models already trained are not changed.</p>
+                <p>While you remain opted in, pseudonymous fueling-research records have no fixed expiration date and are not automatically deleted on a schedule. They may be retained for ongoing statistical analysis and model development until you withdraw consent or request account deletion. After withdrawal, deletion from the active dataset begins immediately; the server-only cleanup key may remain for up to eight days, and provider-managed recovery copies may remain for up to 14 days as described above.</p>
+                <h3>Consent records</h3>
+                <p>We retain a record of your consent status, policy version, and the dates you opt in or withdraw so we can enforce your choice and document how research records were authorized. This record is deleted with your account, subject to the limited recovery periods that apply to backups. A random participant key needed to complete withdrawal cleanup is kept server-side for up to eight days as described above.</p>
             </section>
 
             <section aria-labelledby="account-deletion-and-your-choices">
                 <h2 id="account-deletion-and-your-choices">9. Account Deletion and Your Choices</h2>
-                <p>Depending on the features available in your version of the app, you may be able to:</p>
+                <p>You may be able to:</p>
                 <ul>
                     <li>Edit your profile information</li>
                     <li>Change activity visibility</li>
                     <li>Delete activity summaries</li>
                     <li>Remove followers or following relationships</li>
                     <li>Block users</li>
-                    <li>Change AI or training consent preferences</li>
+                    <li>Opt in to or withdraw from optional fueling analysis and future custom-model development</li>
                     <li>Delete your account</li>
                 </ul>
-                <p>You may also contact us using the information below to request access, correction, deletion, or other privacy support.</p>
+                <p>You may also request access, correction, or deletion of your account information by contacting runreportsupport@gmail.com. Account deletion removes your Firebase account records and starts deletion of your active research rows. Deletion requests are processed promptly; the Google Cloud recovery-copy periods described above still apply.</p>
             </section>
 
             <section aria-labelledby="childrens-privacy">
                 <h2 id="childrens-privacy">10. Children’s Privacy</h2>
-                <p>
-                    Run Report is not intended for children under 13, or the minimum age required by applicable law in the user’s location.
-                </p>
-                <p>
-                    We do not knowingly collect personal information from children below the applicable age. If you believe a child has provided information to us, please contact us so we can take appropriate action.
-                </p>
+                <p>Run Report is not intended for children under 13, or the minimum age required by applicable law in the user’s location.</p>
+                <p>We do not knowingly collect personal information from children below the applicable age. If you believe a child has provided information to us, please contact us so we can take appropriate action.</p>
             </section>
 
             <section aria-labelledby="international-data-transfers">
                 <h2 id="international-data-transfers">11. International Data Transfers</h2>
-                <p>
-                    Run Report and our service providers may process and store information in countries other than the country where you live. Those countries may have different data protection laws.
-                </p>
+                <p>Run Report and our service providers may process and store information in countries other than the country where you live. Those countries may have different data protection laws.</p>
                 <p>Where required, we will use appropriate safeguards for international data transfers.</p>
             </section>
 
             <section aria-labelledby="third-party-services-and-links">
                 <h2 id="third-party-services-and-links">12. Third-Party Services and Links</h2>
-                <p>
-                    The app may use third-party services or contain links to external websites. We are not responsible for the privacy practices, content, or security of third-party services.
-                </p>
+                <p>The app may use third-party services or contain links to external websites. We are not responsible for the privacy practices, content, or security of third-party services.</p>
                 <p>You should review the privacy policies of third-party services before using them.</p>
             </section>
 
             <section aria-labelledby="changes-to-this-privacy-policy">
                 <h2 id="changes-to-this-privacy-policy">13. Changes to This Privacy Policy</h2>
-                <p>
-                    We may update this Privacy Policy from time to time. When we make changes, we will update the effective date and may provide additional notice when required.
-                </p>
-                <p>
-                    Your continued use of Run Report after an updated Privacy Policy becomes effective means that you acknowledge the updated policy.
-                </p>
+                <p>We may update this Privacy Policy from time to time. When we make changes, we will update the effective date and may provide additional notice when required.</p>
+                <p>Your continued use of Run Report after an updated Privacy Policy becomes effective means that you acknowledge the updated policy.</p>
             </section>
 
             <section aria-labelledby="contact-us">

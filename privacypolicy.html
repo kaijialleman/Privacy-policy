@@ -65,7 +65,7 @@
                 <p>You may also use certain features through anonymous authentication where supported.</p>
 
                 <h3>Activity and training information</h3>
-                <p>You provide account details, profile information, race and workout summaries, fueling timelines, ratings, notes, photos, and social content directly through Run Report. Race, workout, and fueling information includes:</p>
+                <p>You provide account details, profile information, race and workout summaries, fueling timelines, ratings, notes, photos, and social content directly through Run Report. Race, workout, and nutrition details, notes, and photos may contain sensitive personal data and should be treated carefully.</p>
                 <ul>
                     <li>Race and workout names</li>
                     <li>Distance, date, start time, elapsed time when provided, visibility, and self-reported activity rating</li>
@@ -135,7 +135,7 @@
                     <li>Public follower and following relationships</li>
                 </ul>
                 <p>Do not include sensitive information in public activity summaries, comments, notes, or photos.</p>
-                <p>You can control whether new activity summaries are private or public using the app’s privacy settings. Information that has already been viewed, copied, or shared by others may not be fully removed or recoverable.</p>
+                <p>You can control whether new activity summaries are private or public using the app’s privacy settings. Information that has already been viewed, copied, or shared by others may not be retractable.</p>
             </section>
 
             <section aria-labelledby="information-sharing">
@@ -145,10 +145,10 @@
 
                 <h3>With service providers</h3>
                 <p>We use third-party providers to operate Run Report, including services for authentication, database storage, file and photo storage, app infrastructure, diagnostics, and security.</p>
-                <p>Our current infrastructure uses Firebase services provided by Google LLC for authentication, database storage, and file storage. Google also provides the Google Cloud services described below. Google processes this information as a service provider on Run Report's behalf under the terms and data-protection commitments applicable to the Firebase and Google Cloud services we use.</p>
+                <p>Our current infrastructure uses Firebase services provided by Google LLC for authentication, database storage, and file storage. Google also provides the Google Cloud services described above. Google's data-protections are equivalent to the protections RunReport applies.</p>
                 <ul>
-                    <li>When you upload a profile or activity photo, Run Report sends the selected image to Google Cloud Vision SafeSearch for an automated content check before storage. The in-app prompt identifies this image-processing transfer before it occurs. Images that fail the check are rejected.</li>
-                    <li>If you opt in to fueling analysis and custom model development, Run Report replaces your account identifier with a random pseudonymous participant key and sends the listed eligible fields to Google LLC's Google Cloud services. BigQuery stores and supports analysis of the dataset, including statistical analysis such as clustering and dimensionality reduction. If you opt in, you also authorize the described future use of eligible data in Gemini Enterprise Agent Platform managed custom-training jobs to train and evaluate Run Report's custom transformer-based fueling-outcome classifier using fueling-history features and self-reported activity-rating labels. This trains Run Report's model; it does not send your data to the Gemini generative-model API. These training jobs are planned and are not currently active.</li>
+                    <li>When you upload a profile or activity photo, Run Report sends the selected image to Google Cloud Vision SafeSearch for an automated content check before storage. The in-app processing is designed to detect unsafe content and prevent certain files from being stored.</li>
+                    <li>If you opt in to fueling analysis and custom model development, Run Report replaces your account identifier with a random pseudonymous participant key and sends the listed eligible research data to Google BigQuery for aggregated analysis.</li>
                 </ul>
 
                 <h3>With other users</h3>
@@ -167,18 +167,18 @@
             <section aria-labelledby="nutrition-and-health-related-information">
                 <h2 id="nutrition-and-health-related-information">5. Nutrition and Health-Related Information</h2>
                 <p>Run Report may allow you to record nutrition, fueling, performance, and activity information. This information may be sensitive.</p>
-                <p>Run Report is not a medical service and does not provide medical diagnoses or medical advice. Pattern insights are for informational purposes only and should be discussed with a qualified healthcare professional when appropriate.</p>
+                <p>Run Report is not a medical service and does not provide medical diagnoses or medical advice. Pattern insights are for informational purposes only and should be discussed with a qualified medical professional as appropriate.</p>
                 <p>You should not use Run Report as a substitute for professional medical care.</p>
             </section>
 
             <section aria-labelledby="ai-and-training-insights">
                 <h2 id="ai-and-training-insights">6. AI and Training Insights</h2>
-                <p>Run Report uses BigQuery analyses to provide community-level fueling insights. Published patterns are shown only when at least 20 distinct opted-in participants contribute to a group, and each participant is weighted equally in the displayed average. The results describe associations and are not medical advice or a guarantee of an outcome.</p>
-                <p>You may separately opt in to contribute eligible race summaries to Run Report's statistical analysis and custom fueling-model development. Participation is optional and does not affect core app features. Only summaries created on or after your affirmative opt-in are eligible; summaries created before you opt in are not added retroactively. The research export uses the summary as it was first saved, and later edits do not update that research row. Eligible fields include race name, distance, date, start time, elapsed time when provided, visibility, self-reported activity rating, cheers count, fueling event types and timing, timeline slot offsets and count, event notes, and summary notes.</p>
-                <p>For this optional purpose, Run Report replaces your account identifier with a random pseudonymous participant key. This is pseudonymous data, not a promise of anonymity: notes are free text and could identify you if you include personal details. We do not include your username, account identifiers, account email address, profile photo, race photos, or other users' comments in the research export. We restrict access to the research dataset to authorized Run Report systems and personnel. A materially different service or purpose will require an updated disclosure and consent.</p>
-                <p>You can withdraw at any time in Privacy Settings. Once withdrawal is recorded, Run Report stops exporting future eligible summaries and immediately begins deleting your rows from the active BigQuery research dataset. If a service failure prevents deletion, the request is queued and retried until completed. To clean up delayed or retried export events, Run Report retains the random participant key in a server-only deletion queue for up to eight days after withdrawal, then deletes that key and queue record. Withdrawal does not remove your race summaries from Firebase because they continue to support your account's app features; delete those summaries separately in the app or request account deletion.</p>
-                <p>After rows are deleted from BigQuery, Google Cloud's recovery systems may retain recoverable copies for a limited period. BigQuery's default time-travel period is up to seven days, followed by a seven-day fail-safe period, so deleted data may remain in recovery storage for up to 14 days. Those copies are not available for ordinary analysis and are removed when the applicable recovery periods end. Run Report cannot promise immediate erasure from these provider-managed recovery copies.</p>
-                <p>Withdrawal and deletion do not alter custom models that were already trained before withdrawal. We do not automatically retrain or modify those models. Data from a withdrawn participant is not used for future exports or future model-training datasets unless that person opts in again.</p>
+                <p>Run Report uses BigQuery analyses to provide community-level fueling insights. Published patterns are shown only when at least 20 distinct opted-in participants contribute to a group and the data passes internal quality checks.</p>
+                <p>You may separately opt in to contribute eligible race summaries to Run Report's statistical analysis and custom fueling-model development. Participation is optional and does not affect your ability to use the app.</p>
+                <p>For this optional purpose, Run Report replaces your account identifier with a random pseudonymous participant key. This is pseudonymous data, not a promise of anonymity: notes are filtered and reviewed to reduce risk of identifying information, but some context may still be inferable.</p>
+                <p>You can withdraw at any time in Privacy Settings. Once withdrawal is recorded, Run Report stops exporting future eligible summaries and immediately begins deleting your rows from the research dataset.</p>
+                <p>After rows are deleted from BigQuery, Google Cloud's recovery systems may retain recoverable copies for a limited period. BigQuery's default time-travel period is up to seven days, and deleted data can remain in backups or logs for limited operational periods.</p>
+                <p>Withdrawal and deletion do not alter custom models that were already trained before withdrawal. We do not automatically retrain or modify those models. Data from a withdrawn participant may still influence a previously trained model in ways that cannot be fully reversed.</p>
             </section>
 
             <section aria-labelledby="data-storage-and-security">
@@ -198,10 +198,10 @@
                     <li>Resolve disputes</li>
                     <li>Enforce our agreements</li>
                 </ul>
-                <p>When you delete your account, Run Report removes your Firebase account records and starts deletion of your active pseudonymous research rows. Deletion requests are processed promptly. If a service failure prevents deletion, the request is queued and retried until completed. Google Cloud recovery copies may remain for up to 14 days after deletion, information already viewed or shared by others may not be recoverable, and custom models already trained are not changed.</p>
-                <p>While you remain opted in, pseudonymous fueling-research records have no fixed expiration date and are not automatically deleted on a schedule. They may be retained for ongoing statistical analysis and model development until you withdraw consent or request account deletion. After withdrawal, deletion from the active dataset begins immediately; the server-only cleanup key may remain for up to eight days, and provider-managed recovery copies may remain for up to 14 days as described above.</p>
+                <p>When you delete your account, Run Report removes your Firebase account records and starts deletion of your active pseudonymous research rows. Deletion requests are processed promptly, but some data may remain in backups or logs for a limited time while systems complete removal.</p>
+                <p>While you remain opted in, pseudonymous fueling-research records have no fixed expiration date and are not automatically deleted on a schedule. They may be retained for ongoing statistical analysis and model quality monitoring.</p>
                 <h3>Consent records</h3>
-                <p>We retain a record of your consent status, policy version, and the dates you opt in or withdraw so we can enforce your choice and document how research records were authorized. This record is deleted with your account, subject to the limited recovery periods that apply to backups. A random participant key needed to complete withdrawal cleanup is kept server-side for up to eight days as described above.</p>
+                <p>We retain a record of your consent status, policy version, and the dates you opt in or withdraw so we can enforce your choice and document how research records were authorized. This record is kept as a non-research administrative record.</p>
             </section>
 
             <section aria-labelledby="account-deletion-and-your-choices">
@@ -216,7 +216,7 @@
                     <li>Opt in to or withdraw from optional fueling analysis and future custom-model development</li>
                     <li>Delete your account</li>
                 </ul>
-                <p>You may also request access, correction, or deletion of your account information by contacting runreportsupport@gmail.com. Account deletion removes your Firebase account records and starts deletion of your active research rows. Deletion requests are processed promptly; the Google Cloud recovery-copy periods described above still apply.</p>
+                <p>You may also request access, correction, or deletion of your account information by contacting runreportsupport@gmail.com. Account deletion removes your Firebase account records and initiates research-data removal according to the retention schedule described above.</p>
             </section>
 
             <section aria-labelledby="childrens-privacy">
